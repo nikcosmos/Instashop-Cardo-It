@@ -1,0 +1,150 @@
+.header {
+   width: 100%;
+   padding: 20px 15px 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   &__content {
+      display: grid;
+      grid-template-columns: 30px auto;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      position: relative;
+      height: 100px;
+      transition: height 1.2s linear 0s;
+      .move & {
+         transition: height 1.2s linear 0s;
+         height: 45px;
+      }
+   }
+   //City========================================================================================================================================================
+   &__city-list {
+      max-width: fit-content;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin: 0 0 0 auto;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 1.2s linear 0s, visibility 1.2s linear 0s;
+      .move & {
+         transition: opacity 1.2s linear 0s, visibility 1.2s linear 0s;
+         opacity: 0;
+         visibility: hidden;
+      }
+   }
+
+   &__city {
+      white-space: nowrap;
+      font-size: 12px;
+      opacity: 0;
+      @extend %textLg;
+      &:nth-child(1) {
+         opacity: 1;
+      }
+      &:nth-child(2) {
+         opacity: 0.9;
+      }
+      &:nth-child(3) {
+         opacity: 0.8;
+      }
+      &:nth-child(4) {
+         opacity: 0.7;
+      }
+      &:nth-child(5) {
+         opacity: 0.6;
+      }
+      &:nth-child(6) {
+         opacity: 0.5;
+      }
+   }
+
+   //Logo========================================================================================================================================================
+   &__logo-content {
+      position: absolute;
+      max-width: 215px;
+      width: 100%;
+      left: 15px;
+      top: 70px;
+      transition: left 1.2s linear 0s, top 1.2s linear 0s;
+      .move & {
+         transition: left 1.2s linear 0s, top 1.2s linear 0s;
+         top: 20px;
+         left: calc(50% - 107px);
+      }
+   }
+   &__logo {
+      margin-bottom: 5px;
+      img {
+         width: 100%;
+         object-fit: contain;
+      }
+   }
+
+   &__logo-text {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+      @extend %textLg;
+      text-align: center;
+   }
+   &__fix-btn {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+   }
+}
+
+.icon-menu {
+   flex: none;
+   display: block;
+   position: relative;
+   width: 30px;
+   height: 18px;
+   z-index: 1;
+   &.close {
+      width: 25px;
+      height: 25px;
+   }
+   @media (any-hover: none) {
+      cursor: default;
+   }
+   span,
+   &::before,
+   &::after {
+      content: '';
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 5px;
+      background-color: var(--burger-icon-color);
+   }
+   &::before {
+      top: 0;
+   }
+   &::after {
+      bottom: 0;
+   }
+   span {
+      top: calc(50% - 1px);
+   }
+   &.close {
+      span {
+         width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+         top: calc(50% - 1px);
+         transform: rotate(-45deg);
+      }
+      &::after {
+         bottom: calc(50% - 1px);
+         transform: rotate(45deg);
+      }
+   }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class='loaded loaded-lang'>
+@@include('components/_head.htm',{
+"title":"Cardo-IT"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('components/_loader.htm',{})
+		@@include('components/_header.htm',{"tab":"tab3"})
+		@@include('components/_burger.htm',{"tab":"tab3"})
+		<button data-lg="apply-button" data-screen-hide='8,9,10' data-go-screen='7' type="button" class="main-fix-btn">APPLY</button>
+		<main id='mainSlider' class="main-slider">
+			<div class="main-slider__content">
+				<div class="main-slider__slide fix-btn">@@include('components/1.htm',{"tab":"tab3"})</div>
+				<div class="main-slider__slide fix-btn">@@include('components/2.htm',{"tab":"tab3"})</div>
+				<div class="main-slider__slide fix-btn">@@include('components/3.htm',{"tab":"tab3"})</div>
+				<div class="main-slider__slide fix-btn">@@include('components/4.htm',{"tab":"tab3"})</div>
+				<div class="main-slider__slide fix-btn">@@include('components/5.htm',{"tab":"tab3"})</div>
+				<div class="main-slider__slide fix-btn">@@include('components/6.htm',{"tab":"tab3"})</div>
+				<div class="main-slider__slide fix-btn">@@include('components/7.htm',{"tab":"tab3"})</div>
+				<div class="main-slider__slide">@@include('components/8.htm',{"tab":"tab3"})</div>
+				<div class="main-slider__slide">@@include('components/9.htm',{"tab":"tab3"})</div>
+				<div class="main-slider__slide">@@include('components/_footer.htm',{"tab":"tab3"})</div>
+			</div>
+		</main>
+	</div>
+</body>
+
+</html>

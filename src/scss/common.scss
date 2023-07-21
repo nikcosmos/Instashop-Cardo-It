@@ -1,0 +1,310 @@
+//Typography========================================================================================================================================================
+%textLg {
+   background: var(--gradient-text-color);
+   background-clip: text;
+   text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+//SlideBg========================================================================================================================================================
+%bg {
+   border-radius: var(--screen-border-radius);
+   border: 1px solid var(--screen-border-color);
+   background: var(--screen-bg);
+}
+//Tabs========================================================================================================================================================
+.main-tabs {
+   transition: all 1s ease 0s;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   border-radius: var(--tabs-border-radius);
+   background: var(--tabs-bg);
+   &__item {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px;
+      color: var(--tabs-text-color);
+      border-radius: var(--tabs-border-radius);
+      &:nth-child(1) {
+         .tab1 & {
+            background: var(--tabs-active-bg);
+            color: var(--tabs-text-active-color);
+         }
+      }
+      &:nth-child(2) {
+         .tab2 & {
+            background: var(--tabs-active-bg);
+            color: var(--tabs-text-active-color);
+         }
+      }
+      &:nth-child(3) {
+         .tab3 & {
+            background: var(--tabs-active-bg);
+            color: var(--tabs-text-active-color);
+         }
+      }
+   }
+}
+//Swiper Style========================================================================================================================================================
+.swiper-horizontal {
+   touch-action: pan-y;
+}
+.swiper-vertical {
+   touch-action: pan-x;
+}
+//SwiperPagination========================================================================================================================================================
+.pagination {
+   will-change: transform;
+   position: absolute;
+   bottom: 2%;
+   left: 50%;
+   transform: translate(-50%, 0px);
+   display: flex;
+   gap: 4px;
+   align-items: center;
+   &.swiper-pagination-lock {
+      display: none;
+   }
+   .swiper-pagination-bullet {
+      border-radius: 50%;
+      display: block;
+      width: 7px;
+      height: 7px;
+      background: var(--pagination-bg);
+      transition: all 0.7s ease 0s;
+   }
+   .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      background: var(--pagination-bg-active);
+      transition: all 0.7s ease 0s;
+   }
+}
+//Buttons========================================================================================================================================================
+%btn {
+   background: var(--button-bg);
+   color: var(--button-text-color);
+   text-align: center;
+   border-radius: 35px;
+   text-align: center;
+   font-size: 18px;
+   font-weight: 700;
+   text-transform: uppercase;
+   padding: 13px;
+}
+.main-fix-btn {
+   position: absolute;
+   z-index: 2;
+   bottom: 26px;
+   left: 50%;
+   max-width: 83%;
+   width: 100%;
+   @extend %btn;
+   transform: translate(-50%, 0px);
+   transition: all 0.7s var(--cb) 0s;
+   .loaded &,
+   .loaded-lang & {
+      transition: bottom 0.7s var(--cb) 0s;
+      transform: translate(-50%, 0px);
+      left: 50%;
+      bottom: -75px;
+   }
+   &.hide {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.7s var(--cb) 0s;
+   }
+}
+//BgImg========================================================================================================================================================
+%bgImg {
+   position: relative;
+   &::before {
+      will-change: filter, transform;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      max-width: var(--screen-img-bg-size);
+      max-height: var(--screen-img-bg-size);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: var(--screen-img-bg);
+      filter: blur(20px);
+      transition: none;
+   }
+}
+//Loader========================================================================================================================================================
+.loader {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 3;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: transparent;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+   .loaded &,
+   .loaded-lang & {
+      visibility: visible;
+      opacity: 1;
+      background: var(--site-loader-bg);
+   }
+   .load-info & {
+      transition: none;
+      will-change: backdrop-filter;
+      opacity: 1;
+      visibility: visible;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+   }
+   &__spinner {
+      width: 80px;
+      height: 80px;
+      display: grid;
+      border: 4px solid #0000;
+      border-radius: 50%;
+      border-color: var(--sity-loader-color-1) #0000;
+      animation: loader-animation 1s infinite linear;
+
+      &::before,
+      &::after {
+         content: '';
+         grid-area: 1/1;
+         margin: 2.2px;
+         border: inherit;
+         border-radius: 50%;
+      }
+
+      &::before {
+         border-color: var(--sity-loader-color-2) #0000;
+         animation: inherit;
+         animation-duration: 0.5s;
+         animation-direction: reverse;
+      }
+
+      &::after {
+         margin: 8.9px;
+      }
+
+      @keyframes loader-animation {
+         100% {
+            transform: rotate(1turn);
+         }
+      }
+   }
+}
+
+.lazy-loader {
+   width: var(--lazy-loader-size);
+   height: var(--lazy-loader-size);
+   position: absolute;
+   top: calc(50% - (var(--lazy-loader-size) / 2));
+   left: calc(50% - (var(--lazy-loader-size) / 2));
+   transform: rotate(0deg);
+   border-radius: 50%;
+   animation: lazy-rotate 1s linear infinite;
+
+   &::before {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid var(--lazy-loader-color);
+      animation: lazy-animation 2s linear infinite;
+   }
+
+   @keyframes lazy-rotate {
+      100% {
+         transform: rotate(360deg);
+      }
+   }
+
+   @keyframes lazy-animation {
+      0% {
+         clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+      }
+
+      25% {
+         clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+      }
+
+      50% {
+         clip-path: polygon(
+            50% 50%,
+            0 0,
+            100% 0,
+            100% 100%,
+            100% 100%,
+            100% 100%
+         );
+      }
+
+      75% {
+         clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+      }
+
+      100% {
+         clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+      }
+   }
+}
+iframe[data-ll-status],
+img[data-ll-status] {
+   opacity: 0;
+   transform: scale(0.5);
+}
+iframe[data-ll-status],
+._lazy-loaded,
+img[data-ll-status]._lazy-loaded {
+   opacity: 1;
+   transform: scale(1);
+   transition: opacity 0.7s var(--cb) 0s, transform 0.7s var(--cb) 0s;
+   & + .lazy-loader {
+      opacity: 0;
+      visibility: hidden;
+   }
+}
+
+//FormStatus========================================================================================================================================================
+.form-status {
+   flex: 1 1 auto;
+   display: none;
+   flex-direction: column;
+   gap: 20px;
+   &__content {
+      flex: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+   }
+
+   &__icon {
+      width: 50px;
+      height: 50px;
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.5);
+   }
+
+   &__text {
+      font-size: 18px;
+      @extend %textLg;
+      text-align: center;
+   }
+
+   &__button {
+      @extend %btn;
+   }
+}

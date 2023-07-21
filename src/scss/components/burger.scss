@@ -1,0 +1,97 @@
+.burger {
+   padding: 40px;
+   position: absolute;
+   z-index: 3;
+   width: 93%;
+   height: 100%;
+   top: 0;
+   left: -100%;
+   background: var(--burger-bg);
+   border-radius: 0 var(--burger-border-radius) var(--burger-border-radius) 0;
+   transition: left 0.3s ease 0s;
+   .menu-open & {
+      will-change: left;
+      transition: left 0.7s ease 0s;
+      left: 0;
+   }
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 30px;
+
+   overflow: auto;
+   &__top-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__logo {
+      flex: 0 0 145px;
+   }
+}
+
+.burger-list {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   &__title {
+      color: var(--burger-list-title);
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+   }
+
+   &__btn {
+      max-width: fit-content;
+      padding: 8px 8px 8px 0px;
+      font-size: 16px;
+      @extend %textLg;
+   }
+}
+
+.language-block {
+   &__title {
+      color: var(--burger-list-title);
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px 5px;
+      justify-items: start;
+      position: relative;
+   }
+
+   &__item {
+      padding: 8px 8px 8px 0px;
+      text-transform: uppercase;
+      &._active {
+         span {
+            background: var(--burger-lang-item-color-active);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            &::after {
+               content: '';
+               position: absolute;
+               left: 0;
+               bottom: 0;
+               background: var(--burger-lang-item-color-active);
+               width: 100%;
+               height: 1px;
+            }
+         }
+      }
+      span {
+         pointer-events: none;
+         font-weight: 600;
+         font-size: 16px;
+      }
+   }
+}
