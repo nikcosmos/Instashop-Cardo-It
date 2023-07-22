@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" class='loaded loaded-lang'>
+
+<head>
+	<title>Cardo-IT</title>
+	<meta charset="UTF-8">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="format-detection" content="telephone=no"> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230722120637">
+	<script src="js/app.min.js?_v=20230722120637" defer></script>
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="loader">
+			<div class='loader__spinner'></div>
+		</div>
+		<header id='header' class="header">
+			<div class='header__content'>
+				<button type="button" class="icon-menu"><span></span></button>
+				<div class='header__city-list'>
+					<div class="header__city">Los Angeles</div>
+					<div class="header__city">New York</div>
+					<div class="header__city">London</div>
+					<div class="header__city">Berlin</div>
+				</div>
+			</div>
+			<div class='header__logo-content'>
+				<div class="header__logo">
+					<img src="img/logo.svg" alt="logo">
+				</div>
+				<h1 data-lg="header-tagline" class='header__logo-text'></h1>
+			</div>
+			<div class="main-tabs tab3">
+				<a data-lg="tab1" href='./influencers.html' class="main-tabs__item _active">For Influencers</a>
+				<a data-lg="tab2" href='./recruiters.html' class="main-tabs__item">For Recruiters</a>
+				<a data-lg="tab3" href='./investors.html' class="main-tabs__item">For Investors</a>
+			</div>
+		</header>
+		<div class="burger">
+			<div class="burger__top-line">
+				<div class="burger__logo">
+					<img src="img/logo.svg" alt="logo">
+				</div>
+				<button type="button" class=" icon-menu close"><span></span></button>
+			</div>
+			<div class="burger-list">
+				<h3 data-lg="burger-title" class="burger-list__title"></h3>
+				<a data-lg="burger-link1" href="./influencers.html" class="burger-list__btn">Instashop for influencers</a>
+				<a data-lg="burger-link2" href="./recruiters.html" class="burger-list__btn">Instashop for recruiters</a>
+				<a data-lg="burger-link3" href="./investors.html" class="burger-list__btn">Instashop for investors</a>
+			</div>
+			<div class="burger-list">
+				<h3 data-lg="burger-title2" class="burger-list__title"></h3>
+				<button data-lg="burger-contact-btn" type='button' data-go-screen='10' class="burger-list__btn"></button>
+			</div>
+			<div class="language-block">
+				<h3 data-lg="burger-lang-title" class="language-block__title"></h3>
+				<div id='langList' class="language-block__list">
+					<div class='lazy-loader'></div>
+				</div>
+			</div>
+		</div>
+		<button data-lg="apply-button" data-screen-hide='8,9,10' data-go-screen='7' type="button" class="main-fix-btn">APPLY</button>
+		<main id='mainSlider' class="main-slider">
+			<div class="main-slider__content">
+				<div class="main-slider__slide fix-btn">
+					<div class="screen-temp first-screen">
+						<h2 data-lg='tab3-screen1-slide1-title' class="screen-temp__title"></h2>
+						<p data-lg='tab3-screen1-slide1-descr' class='screen-temp__descr'></p>
+						<div class="screen-temp__img">
+							<img data-src="img/tab3/screen-1/overlay.png" alt="overlay">
+							<div class='lazy-loader'></div>
+						</div>
+					</div>
+				</div>
+				<div class="main-slider__slide fix-btn">
+					<div data-slider='2' class="feedback-screen">
+						<div class="feedback-screen__content swiper-wrapper">
+							<div class="feedback-screen__slide swiper-slide">
+								<p class="feedback-screen__quote">
+									<svg>
+										<use xlink:href='img/icons/icons.svg#svg-quote'></use>
+									</svg>
+									<span data-lg='tab3-screen2-slide1-quote'></span>
+								</p>
+								<p data-lg="tab3-screen2-slide1-name" class="feedback-screen__name"></p>
+								<p data-lg="tab3-screen2-slide1-info" class='feedback-screen__sub-info'></p>
+								<div class="feedback-screen__img">
+									<img src="img/tab3/screen-2/slide-1/overlay.png" alt="overlay">
+								</div>
+								<button data-go-screen='7' type="button" class="feedback-screen__button">
+									<span data-lg="tab3-screen2-link"></span>
+									<svg>
+										<use xlink:href='img/icons/icons.svg#svg-arrow'></use>
+									</svg>
+								</button>
+							</div>
+							<div class="feedback-screen__slide swiper-slide">
+								<p class="feedback-screen__quote">
+									<svg>
+										<use xlink:href='img/icons/icons.svg#svg-quote'></use>
+									</svg>
+									<span data-lg='tab3-screen2-slide2-quote'></span>
+								</p>
+								<p data-lg="tab3-screen2-slide2-name" class="feedback-screen__name"></p>
+								<p data-lg="tab3-screen2-slide2-info" class='feedback-screen__sub-info'></p>
+								<div class="feedback-screen__img">
+									<img data-src="img/tab3/screen-2/slide-2/overlay.png" alt="overlay">
+									<div class='lazy-loader'></div>
+								</div>
+								<button data-go-screen='7' type="button" class="feedback-screen__button">
+									<span data-lg="tab3-screen2-link"></span>
+									<svg>
+										<use xlink:href='img/icons/icons.svg#svg-arrow'></use>
+									</svg>
+								</button>
+							</div>
+							<div class="feedback-screen__slide swiper-slide">
+								<p class="feedback-screen__quote">
+									<svg>
+										<use xlink:href='img/icons/icons.svg#svg-quote'></use>
+									</svg>
+									<span data-lg='tab3-screen2-slide3-quote'></span>
+								</p>
+								<p data-lg="tab3-screen2-slide3-name" class="feedback-screen__name"></p>
+								<p data-lg="tab3-screen2-slide3-info" class='feedback-screen__sub-info'></p>
+								<div class="feedback-screen__img">
+									<img data-src="img/tab3/screen-2/slide-2/overlay.png" alt="overlay">
+									<div class='lazy-loader'></div>
+								</div>
+								<button data-go-screen='7' type="button" class="feedback-screen__button">
+									<span data-lg="tab3-screen2-link"></span>
+									<svg>
+										<use xlink:href='img/icons/icons.svg#svg-arrow'></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div data-slider-pagination class="pagination"></div>
+					</div>
+				</div>
+				<div class="main-slider__slide fix-btn">
+					<div class="screen-temp">
+						<div data-slider='3' class="screen-temp__slider">
+							<div class="screen-temp__slider-wrap swiper-wrapper">
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen3-slide1-title' class="screen-temp__title"></h2>
+									<p data-lg="tab3-screen3-slide1-descr" class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-3/slide-1/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen3-slide2-title' class="screen-temp__title"></h2>
+									<p data-lg="tab3-screen3-slide2-descr" class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-3/slide-2/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen3-slide3-title' class="screen-temp__title"></h2>
+									<p data-lg="tab3-screen3-slide3-descr" class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-3/slide-3/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+							</div>
+							<div data-slider-pagination class="pagination"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main-slider__slide fix-btn">
+					<div class="screen-temp">
+						<div data-slider='4' class="screen-temp__slider">
+							<div class="screen-temp__slider-wrap swiper-wrapper">
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen4-slide1-title' class="screen-temp__title"></h2>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-4/slide-1/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen4-slide2-title' class="screen-temp__title"></h2>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-4/slide-2/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen4-slide3-title' class="screen-temp__title"></h2>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-4/slide-3/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+							</div>
+							<div data-slider-pagination class="pagination"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main-slider__slide fix-btn">
+					<div class="screen-temp">
+						<div data-slider='5' class="screen-temp__slider">
+							<div class="screen-temp__slider-wrap swiper-wrapper">
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen5-slide1-title' class="screen-temp__title"></h2>
+									<p data-lg="tab3-screen5-slide1-descr" class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-5/slide-1/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen5-slide2-title' class="screen-temp__title"></h2>
+									<p data-lg="tab3-screen5-slide2-descr" class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-5/slide-2/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen5-slide3-title' class="screen-temp__title"></h2>
+									<p data-lg="tab3-screen5-slide3-descr" class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-5/slide-3/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+							</div>
+							<div data-slider-pagination class="pagination"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main-slider__slide fix-btn">
+					<div class="screen-temp">
+						<div data-slider='6' class="screen-temp__slider">
+							<div class="screen-temp__slider-wrap swiper-wrapper">
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen6-slide1-title' class="screen-temp__title"></h2>
+									<p data-lg='tab3-screen6-slide1-descr' class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-6/slide-1/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen6-slide2-title' class="screen-temp__title"></h2>
+									<p data-lg='tab3-screen6-slide2-descr' class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-6/slide-2/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg='tab3-screen6-slide3-title' class="screen-temp__title"></h2>
+									<p data-lg='tab3-screen6-slide3-descr' class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-6/slide-3/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+							</div>
+							<div data-slider-pagination class="pagination"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main-slider__slide fix-btn">
+					<div class="screen-temp">
+						<h2 data-lg='tab3-screen7-title' class="screen-temp__title"></h2>
+						<p data-lg='tab3-screen7-descr' class='screen-temp__descr'></p>
+						<div data-slider='7' class="screen-temp__slider">
+							<div class="screen-temp__slider-wrap swiper-wrapper">
+								<div class="screen-temp__slide-imgs swiper-slide">
+									<div>
+										<img data-src="img/tab3/screen-7/slide-1/overlay-1.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-1/overlay-2.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-1/overlay-3.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-1/overlay-4.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-1/overlay-5.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-1/overlay-6.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+								<div class="screen-temp__slide-imgs swiper-slide">
+									<div>
+										<img data-src="img/tab3/screen-7/slide-2/overlay-1.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-2/overlay-2.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-2/overlay-3.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-2/overlay-4.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-2/overlay-5.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-2/overlay-6.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+								<div class="screen-temp__slide-imgs swiper-slide">
+									<div>
+										<img data-src="img/tab3/screen-7/slide-3/overlay-1.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-3/overlay-2.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-3/overlay-3.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-3/overlay-4.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-3/overlay-5.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div>
+										<img data-src="img/tab3/screen-7/slide-3/overlay-6.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+								</div>
+							</div>
+							<div data-slider-pagination class="pagination"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main-slider__slide">
+					<div id='formScreen' class="screen-temp ">
+						<h2 data-lg="tab3-screen8-title" class="screen-temp__title"></h2>
+						<p data-lg="tab3-screen8-descr" class='screen-temp__descr'></p>
+						<form id='contactForm' class='screen-temp__form' novalidate>
+							<input data-lg-placeholder='form-name' class='screen-temp__input' type="text" name="name" placeholder='Name'>
+							<input data-lg-placeholder='form-email' class='screen-temp__input' type="email" name="email" placeholder='Email'>
+							<input data-lg-placeholder='form-phone' class='screen-temp__input' type="tel" name="phone" placeholder='Phone'>
+							<textarea data-lg-placeholder='form-notes' class='screen-temp__textarea' name="notes" placeholder='Notes'></textarea>
+						</form>
+						<button data-lg="apply-button" form='contactForm' type="submit" class="screen-temp__button"></button>
+						<div class="form-status form-status_success">
+							<div class="form-status__content">
+								<svg class='form-status__icon'>
+									<use xlink:href='img/icons/icons.svg#svg-ok'></use>
+								</svg>
+								<p data-lg="form-text-success" class="form-status__text"></p>
+							</div>
+						</div>
+						<div class="form-status form-status_error">
+							<div class="form-status__content">
+								<svg class='form-status__icon'>
+									<use xlink:href='img/icons/icons.svg#svg-error'></use>
+								</svg>
+								<p data-lg="form-text-error" class="form-status__text"></p>
+							</div>
+							<button data-lg="try-again-btn" id='tryAgainBtn' type="button" class="form-status__button"></button>
+						</div>
+					</div>
+				</div>
+				<div class="main-slider__slide">
+					<div class="screen-temp">
+						<div data-slider='9' class="screen-temp__slider">
+							<div class="screen-temp__slider-wrap swiper-wrapper">
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg="tab3-screen9-slide1-title" class="screen-temp__title"></h2>
+									<p data-lg="tab3-screen9-slide1-descr" class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-9/slide-1/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div data-lg='tab3-screen9-slide1-label1' class="screen-temp__label screen-temp__label_1 "></div>
+									<div data-lg='tab3-screen9-slide1-label2' class="screen-temp__label screen-temp__label_2 "></div>
+								</div>
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg="tab3-screen9-slide2-title" class="screen-temp__title"></h2>
+									<p data-lg="tab3-screen9-slide2-descr" class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-9/slide-2/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div data-lg='tab3-screen9-slide2-label1' class="screen-temp__label screen-temp__label_1 "></div>
+									<div data-lg='tab3-screen9-slide2-label2' class="screen-temp__label screen-temp__label_2 "></div>
+								</div>
+								<div class="screen-temp__slide swiper-slide">
+									<h2 data-lg="tab3-screen9-slide3-title" class="screen-temp__title"></h2>
+									<p data-lg="tab3-screen9-slide3-descr" class='screen-temp__descr'></p>
+									<div class="screen-temp__img">
+										<img data-src="img/tab3/screen-9/slide-3/overlay.png" alt="overlay">
+										<div class='lazy-loader'></div>
+									</div>
+									<div data-lg='tab3-screen9-slide3-label1' class="screen-temp__label screen-temp__label_1 "></div>
+									<div data-lg='tab3-screen9-slide3-label2' class="screen-temp__label screen-temp__label_2 "></div>
+								</div>
+							</div>
+							<div data-slider-pagination class="pagination"></div>
+						</div>
+						<a data-lg='tab3-screen9-btn' href='./recruiters.html' class="screen-temp__button"></a>
+					</div>
+				</div>
+				<div class="main-slider__slide">
+					<footer class="footer">
+						<div class="footer__top footer-contact">
+							<h3 data-lg="footer-title1" class="footer-contact__title"></h3>
+							<div class="footer-contact__item">
+								<h4 data-lg="ooter-block-title1" class="footer-contact__item-title"></h4>
+								<p class="footer-contact__item-text">
+									1980 Festival Plaza dr.,
+									ste 300
+									Las Vegas
+								</p>
+							</div>
+							<div class="footer-contact__item">
+								<h4 data-lg="ooter-block-title2" class="footer-contact__item-title"></h4>
+								<a class='footer-contact__item-link' href="tel:+7252721560">(725) 272 - 1560</a>
+								<a class='footer-contact__item-link' href="mailto:contacts@instashop.io">contacts@instashop.io</a>
+							</div>
+						</div>
+						<div class="footer__bottom footer-links">
+							<h3 data-lg="footer-title2" class="footer-links__title"></h3>
+							<div class="footer-links__list">
+								<a data-lg="footer-link1" href="#" class="footer-links__link"></a>
+								<a data-lg="footer-link2" href="#" class="footer-links__link"></a>
+								<a data-lg="footer-link3" href="#" class="footer-links__link"></a>
+								<a data-lg="footer-link4" href="#" class="footer-links__link"></a>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+
+</html>
