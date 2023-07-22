@@ -787,9 +787,11 @@ img[data-ll-status]._lazy-loaded + .lazy-loader {
 
 .header__logo {
   margin-bottom: 5px;
+  height: 30px;
 }
 
 .header__logo img {
+  height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
