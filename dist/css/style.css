@@ -24,50 +24,22 @@
 
 :root {
   --font: "Inter";
-  --base-text-color: #f6f6f6;
-  --gradient-text-color: linear-gradient(135deg, #f6f6f6, #afafaf);
-  --bg-body: linear-gradient(
-     209deg,
-     rgba(186, 38, 171, 0.7) 0%,
-     rgba(10, 96, 125, 0.5) 100%
-  );
-  --bg-wrapper: linear-gradient(
-     209deg,
-     rgba(186, 38, 171, 1) 0%,
-     rgba(10, 96, 125, 0.5) 100%
-  );
-  --burger-bg: linear-gradient(
-     135deg,
-     rgba(10, 96, 125, 1) 0%,
-     rgba(186, 38, 171, 1) 100%
-  );
+  --base-text-color: #000000;
+  --gradient-text-color: linear-gradient(135deg, #292929, #000000);
+  --bg-body: #ffffff;
+  --bg-wrapper: #ffffff;
+  --burger-bg: #eeeeee;
   --burger-border-radius: 20px;
-  --burger-icon-color: #f6f6f6;
-  --burger-list-title: #f6f6f6;
-  --burger-lang-item-color-active: linear-gradient(
-     225deg,
-     #1c241d 0%,
-     #1b201c 100%
-  );
-  --tabs-bg: linear-gradient(
-     135deg,
-     rgba(255, 255, 255, 0.33) 0%,
-     rgba(255, 255, 255, 0.18) 100%
-  );
-  --tabs-text-color: #dddddd;
-  --tabs-active-bg: linear-gradient(
-     129deg,
-     #fff 0%,
-     rgba(255, 255, 255, 0.5) 100%
-  );
-  --tabs-text-active-color: #1c241d;
+  --burger-icon-color: #000000;
+  --burger-list-title: #000000;
+  --burger-lang-item-color-active: #000000;
+  --tabs-bg: rgba(88, 88, 88, 0.3);
+  --tabs-text-color: #000000;
+  --tabs-active-bg: #000000;
+  --tabs-text-active-color: #ffffff;
   --tabs-border-radius: 12px;
-  --screen-bg: linear-gradient(
-     135deg,
-     rgba(255, 255, 255, 0.33) 0%,
-     rgba(255, 255, 255, 0.18) 100%
-  );
-  --screen-border-color: rgba(186, 38, 171, 0.5);
+  --screen-bg: rgba(88, 88, 88, 0.1);
+  --screen-border-color: rgba(88, 88, 88, 0.3);
   --screen-border-radius: 16px;
   --screen-img-bg: linear-gradient(
      225deg,
@@ -78,19 +50,15 @@
   --quote-color: #1c241d;
   --label-bg: linear-gradient(129deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
   --label-text-color: #4f4f4f;
-  --pagination-bg: rgba(255, 255, 255, 1);
+  --pagination-bg: rgba(79, 79, 79, 0.3);
   --pagination-bg-active: #1c241d;
-  --button-bg: linear-gradient(129deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
-  --button-text-color: #1c241d;
-  --input-bg: linear-gradient(135deg, #f9f8f8 0%, rgba(10, 96, 125, 0.3) 100%);
+  --button-bg: #1c241d;
+  --button-text-color: #ffffff;
+  --input-bg: #f9f8f8;
   --input-text-color: #000000;
   --input-error-color: red;
-  --site-loader-bg: linear-gradient(
-     129deg,
-     #fff 0%,
-     rgba(255, 255, 255, 0.5) 100%
-  );
-  --sity-loader-color-1: #4f4f4f;
+  --site-loader-bg: #000000;
+  --sity-loader-color-1: #ffffff;
   --sity-loader-color-2: #f9f8f8;
   --lazy-loader-color: #4f4f4f;
   --lazy-loader-size: 30px;
